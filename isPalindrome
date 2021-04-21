@@ -1,0 +1,14 @@
+namespace Algorithms.Strings
+
+module IsPalindrome =
+   /// <summary>
+   /// Determine whether the string is palindrome
+   /// </summary>
+   let isPalindrome (str: string): bool =
+       let str =
+           str.ToLower()
+           |> Seq.filter (System.Char.IsLetterOrDigit)
+           |> Seq.toList
+
+
+       str = (str |> List.rev)
